@@ -28,15 +28,13 @@
  */
 
 
-use local_country_category\country_category_form;
-
 require_once('../../config.php');
 require_once($CFG->libdir.'/adminlib.php');
 require_once($CFG->dirroot . '/course/lib.php');
 
-global $PAGE, $OUTPUT, $SESSION, $DB;
+global $PAGE, $OUTPUT, $SESSION, $DB, $SITE;
 require_login();
-$url = new moodle_url('/local/country_category/index.php');
+$url = new moodle_url('/local/country_category/manage.php');
 $context = context_system::instance();
 require_capability('moodle/category:manage', $context);
 
@@ -50,7 +48,7 @@ $PAGE->set_heading($fullname);
 
 
 echo $OUTPUT->header();
-echo $OUTPUT->heading($strtitle);
+echo $OUTPUT->heading($title);
 $records = $DB->get_records('course_categories',['parent' => 0]);
 ?>
     <table class="table table-bordered">
