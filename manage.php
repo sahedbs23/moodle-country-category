@@ -37,7 +37,8 @@ require_once($CFG->dirroot . '/course/lib.php');
 global $PAGE, $OUTPUT, $SESSION, $DB;
 require_login();
 $url = new moodle_url('/local/country_category/index.php');
-require_capability('moodle/category:manage', context_system::instance());
+$context = context_system::instance();
+require_capability('moodle/category:manage', $context);
 
 $PAGE->set_context($context);
 $PAGE->set_url($url);
