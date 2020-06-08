@@ -99,6 +99,7 @@ class country_category_form extends core_course_editcategory_form {
         }
 
         $mform->addElement('hidden', 'parent', 0);
+        $mform->setType('parent', PARAM_INT);
         $mform->addElement('hidden', 'id', 0);
         $mform->setType('id', PARAM_INT);
         $mform->setDefault('id', $categoryid);

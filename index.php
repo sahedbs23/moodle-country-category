@@ -54,7 +54,7 @@ if ($id) {
         endforeach;
         $category->country = isset($arr) ? $arr : [];
     }else{
-        $category->country = [];
+        $category->country = ['en'];
     }
 
     $context = context_coursecat::instance($id);
