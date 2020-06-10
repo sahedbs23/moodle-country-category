@@ -27,6 +27,7 @@ $capabilities = array(
     'moodle/category:manage',
     'moodle/course:create',
 );
+$systemcontext = context_system::instance();
 
 if ($hassiteconfig or has_any_capability($capabilities, $systemcontext)) {
     $ADMIN->add('courses',
