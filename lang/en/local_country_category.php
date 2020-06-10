@@ -25,6 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['country_category_lang'] = 'Languages';
+$string['country_category:managecategory'] = 'Manage country category';
 $string['managecountrycategory'] = 'Manage country category';
 $string['categoryname'] = 'Category country name';
 $string['country_category:enrolusers'] = 'Add country category';
